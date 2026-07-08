@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/SIGA_App.dir/main.cpp.o CMakeFiles/SIGA_App.dir/src/SensorLDR.cpp.o -o SIGA_App 

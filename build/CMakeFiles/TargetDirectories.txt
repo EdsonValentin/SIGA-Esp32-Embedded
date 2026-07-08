@@ -1,0 +1,3 @@
+/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles/SIGA_App.dir
+/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles/edit_cache.dir
+/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles/rebuild_cache.dir
