@@ -187,7 +187,13 @@ CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o: /workspaces/SIGA-Esp32-Embedded/main.c
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
-  /workspaces/SIGA-Esp32-Embedded/include/Historial.h
+  /workspaces/SIGA-Esp32-Embedded/include/Boton.h \
+  /workspaces/SIGA-Esp32-Embedded/include/Historial.h \
+  /workspaces/SIGA-Esp32-Embedded/include/SensorLDR.h
+
+CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/Boton.cpp \
+  /usr/include/stdc-predef.h \
+  /workspaces/SIGA-Esp32-Embedded/include/Boton.h
 
 CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp \
   /usr/include/stdc-predef.h \
@@ -201,6 +207,10 @@ CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o: /workspaces/SIGA-Esp32-Embedd
 /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp:
 
 /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp:
+
+/workspaces/SIGA-Esp32-Embedded/src/Boton.cpp:
+
+/workspaces/SIGA-Esp32-Embedded/include/Boton.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 

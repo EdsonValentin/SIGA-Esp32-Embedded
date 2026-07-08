@@ -1,35 +1,30 @@
 #include <iostream>
 #include "SensorLDR.h"
 #include "Historial.h"
-#include "Boton.h" // Importamos la nueva herramienta
+#include "Boton.h"
+#include "PantallaVista.h" // Importamos el nuevo plano de pantallas
 
 using namespace std;
 
 int main() {
-    cout << "=== INTEGRANDO BOTONES MODULARES SIGA ===" << endl;
+    cout << "=== INTEGRANDO POLIMORFISMO DE PANTALLA SIGA ===" << endl;
 
-    // 1. Instanciamos el botón de modo en el pin 13 y la bandera de control
-    Boton botonModo(13);
-    bool modoAuto = true;
+    // 1. Instanciamos las dos pantallas fijas en la memoria
+    VistaMonitoreo pantallaMonitoreo;
+    VistaHistorial pantallaHistorial(3, 29.5, 21); // Pasamos estadísticas de prueba
 
-    cout << "Estado Inicial -> MODO: " << (modoAuto ? "AUTO" : "MANUAL") << endl;
+    // 2. Creamos el PUNTERO POLIMÓRFICO de la clase base abstracta
+    PantallaVista* vistaActiva = nullptr;
 
-    // 2. Simulamos escenarios de pulsación
-    // En INPUT_PULLUP: true = suelto (1), false = presionado (0)
-    bool lectura1 = true;  // Botón suelto
-    bool lectura2 = false; // El usuario presiona el botón físicamente
+    // --- ESCENARIO 1: El sistema arranca mostrando el Monitoreo ---
+    cout << "\n[Cambiando puntero a Vista Monitoreo...]" << endl;
+    vistaActiva = &pantallaMonitoreo; 
+    vistaActiva->dibujar(); // Llama al dibujo de Monitoreo de forma dinámica
 
-    cout << "\n[Simulando: Usuario presiona el boton de Modo...]" << endl;
-    if (botonModo.fuePresionado(lectura2)) {
-        modoAuto = !modoAuto; // Cambiamos el modo del sistema
-    }
-    cout << "Nuevo Estado -> MODO: " << (modoAuto ? "AUTO" : "MANUAL") << endl;
-
-    cout << "\n[Simulando: Boton se queda suelto...]" << endl;
-    if (botonModo.fuePresionado(lectura1)) {
-        modoAuto = !modoAuto;
-    }
-    cout << "Estado Actual -> MODO: " << (modoAuto ? "AUTO" : "MANUAL") << endl;
+    // --- ESCENARIO 2: El usuario cambia al menú de estadísticas ---
+    cout << "\n[Cambiando puntero a Vista Historial/Diagnostico...]" << endl;
+    vistaActiva = &pantallaHistorial; 
+    vistaActiva->dibujar(); // Llama al dibujo de Historial con la misma instrucción
 
     return 0;
 }
