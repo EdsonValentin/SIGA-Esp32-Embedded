@@ -1,4 +1,4 @@
-CMakeFiles/SIGA_App.dir/main.cpp.o: \
+CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o: \
  /workspaces/SIGA-Esp32-Embedded/main.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -149,4 +149,4 @@ CMakeFiles/SIGA_App.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /workspaces/SIGA-Esp32-Embedded/include/SensorLDR.h
+ /workspaces/SIGA-Esp32-Embedded/include/Historial.h

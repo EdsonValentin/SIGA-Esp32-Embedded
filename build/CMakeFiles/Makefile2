@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /workspaces/SIGA-Esp32-Embedded/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SIGA_App.dir/all
+all: CMakeFiles/SIGA_App_Fresh.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SIGA_App.dir/clean
+clean: CMakeFiles/SIGA_App_Fresh.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SIGA_App.dir
+# Target rules for target CMakeFiles/SIGA_App_Fresh.dir
 
 # All Build rule for target.
-CMakeFiles/SIGA_App.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=1,2,3 "Built target SIGA_App"
-.PHONY : CMakeFiles/SIGA_App.dir/all
+CMakeFiles/SIGA_App_Fresh.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=1,2,3 "Built target SIGA_App_Fresh"
+.PHONY : CMakeFiles/SIGA_App_Fresh.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SIGA_App.dir/rule: cmake_check_build_system
+CMakeFiles/SIGA_App_Fresh.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/SIGA-Esp32-Embedded/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SIGA_App.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SIGA_App_Fresh.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/SIGA-Esp32-Embedded/build/CMakeFiles 0
-.PHONY : CMakeFiles/SIGA_App.dir/rule
+.PHONY : CMakeFiles/SIGA_App_Fresh.dir/rule
 
 # Convenience name for target.
-SIGA_App: CMakeFiles/SIGA_App.dir/rule
-.PHONY : SIGA_App
+SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/rule
+.PHONY : SIGA_App_Fresh
 
 # clean rule for target.
-CMakeFiles/SIGA_App.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/clean
-.PHONY : CMakeFiles/SIGA_App.dir/clean
+CMakeFiles/SIGA_App_Fresh.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/clean
+.PHONY : CMakeFiles/SIGA_App_Fresh.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

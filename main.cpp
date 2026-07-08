@@ -1,19 +1,19 @@
 #include <iostream>
-#include "SensorLDR.h" 
+#include "Historial.h"
 
 using namespace std;
 
 int main() {
-    cout << "=== PROBANDO ARQUITECTURA SIGA EN PC ===" << endl;
+    cout << "=== PROBANDO NUEVA ARQUITECTURA LIMPIADA ===" << endl;
 
-    SensorLDR sensorLuz(32); 
+    Historial historialRiego;
+    historialRiego.verificarTemperatura(28.9); 
+    historialRiego.verificarSuelo(22); 
+    historialRiego.registrarRiego();
 
-    // Simulamos las lecturas de tu cuarto
-    int luzCuartoPrendida = 1500;
-    int luzCuartoApagada = 400;
-
-    cout << "¿Es de noche con 1500? " << (sensorLuz.esNoche(luzCuartoPrendida) ? "SI" : "NO") << endl;
-    cout << "¿Es de noche con 400? " << (sensorLuz.esNoche(luzCuartoApagada) ? "SI" : "NO") << endl;
+    cout << "Total Riegos Hoy: " << historialRiego.obtenerRiegos() << endl;
+    cout << "Temperatura Maxima: " << historialRiego.obtenerTempMax() << " C" << endl;
+    cout << "Humedad de Suelo Minima: " << historialRiego.obtenerSueloMin() << "%" << endl;
 
     return 0;
 }

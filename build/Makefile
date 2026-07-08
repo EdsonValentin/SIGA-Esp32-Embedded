@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SIGA_App
+# Target rules for targets named SIGA_App_Fresh
 
 # Build rule for target.
-SIGA_App: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SIGA_App
-.PHONY : SIGA_App
+SIGA_App_Fresh: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SIGA_App_Fresh
+.PHONY : SIGA_App_Fresh
 
 # fast build rule for target.
-SIGA_App/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/build
-.PHONY : SIGA_App/fast
+SIGA_App_Fresh/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/build
+.PHONY : SIGA_App_Fresh/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,32 +150,32 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-src/SensorLDR.o: src/SensorLDR.cpp.o
-.PHONY : src/SensorLDR.o
+src/Historial.o: src/Historial.cpp.o
+.PHONY : src/Historial.o
 
 # target to build an object file
-src/SensorLDR.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/src/SensorLDR.cpp.o
-.PHONY : src/SensorLDR.cpp.o
+src/Historial.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o
+.PHONY : src/Historial.cpp.o
 
-src/SensorLDR.i: src/SensorLDR.cpp.i
-.PHONY : src/SensorLDR.i
+src/Historial.i: src/Historial.cpp.i
+.PHONY : src/Historial.i
 
 # target to preprocess a source file
-src/SensorLDR.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/src/SensorLDR.cpp.i
-.PHONY : src/SensorLDR.cpp.i
+src/Historial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.i
+.PHONY : src/Historial.cpp.i
 
-src/SensorLDR.s: src/SensorLDR.cpp.s
-.PHONY : src/SensorLDR.s
+src/Historial.s: src/Historial.cpp.s
+.PHONY : src/Historial.s
 
 # target to generate assembly for a file
-src/SensorLDR.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App.dir/build.make CMakeFiles/SIGA_App.dir/src/SensorLDR.cpp.s
-.PHONY : src/SensorLDR.cpp.s
+src/Historial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.s
+.PHONY : src/Historial.cpp.s
 
 # Help Target
 help:
@@ -185,13 +185,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SIGA_App"
+	@echo "... SIGA_App_Fresh"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/SensorLDR.o"
-	@echo "... src/SensorLDR.i"
-	@echo "... src/SensorLDR.s"
+	@echo "... src/Historial.o"
+	@echo "... src/Historial.i"
+	@echo "... src/Historial.s"
 .PHONY : help
 
 
