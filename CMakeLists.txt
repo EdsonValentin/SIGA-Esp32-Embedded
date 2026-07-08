@@ -11,4 +11,5 @@ add_executable(SIGA_App_Fresh
     main.cpp
     src/Historial.cpp
     src/SensorLDR.cpp
+    src/Boton.cpp
 )

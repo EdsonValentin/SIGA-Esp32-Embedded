@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/SIGA-Esp32-Embedded/main.cpp" "CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o" "gcc" "CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o.d"
+  "/workspaces/SIGA-Esp32-Embedded/src/Boton.cpp" "CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o" "gcc" "CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o.d"
   "/workspaces/SIGA-Esp32-Embedded/src/Historial.cpp" "CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o" "gcc" "CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o.d"
   "/workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp" "CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o" "gcc" "CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o.d"
   )

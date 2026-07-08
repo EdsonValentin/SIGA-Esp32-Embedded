@@ -193,6 +193,12 @@ CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: /workspaces/SIGA-Esp32-Embedd
   /usr/include/stdc-predef.h \
   /workspaces/SIGA-Esp32-Embedded/include/Historial.h
 
+CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp \
+  /usr/include/stdc-predef.h \
+  /workspaces/SIGA-Esp32-Embedded/include/SensorLDR.h
+
+
+/workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp:
 
 /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp:
 
@@ -445,6 +451,8 @@ CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: /workspaces/SIGA-Esp32-Embedd
 /usr/include/c++/13/cstdio:
 
 /usr/include/c++/13/cstdlib:
+
+/workspaces/SIGA-Esp32-Embedded/include/SensorLDR.h:
 
 /usr/include/c++/13/debug/assertions.h:
 

@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o"
   "CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o.d"
+  "CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o"
+  "CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o.d"
   "CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o"
   "CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o.d"
   "CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o"

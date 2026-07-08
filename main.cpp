@@ -1,19 +1,35 @@
 #include <iostream>
+#include "SensorLDR.h"
 #include "Historial.h"
+#include "Boton.h" // Importamos la nueva herramienta
 
 using namespace std;
 
 int main() {
-    cout << "=== PROBANDO NUEVA ARQUITECTURA LIMPIADA ===" << endl;
+    cout << "=== INTEGRANDO BOTONES MODULARES SIGA ===" << endl;
 
-    Historial historialRiego;
-    historialRiego.verificarTemperatura(28.9); 
-    historialRiego.verificarSuelo(22); 
-    historialRiego.registrarRiego();
+    // 1. Instanciamos el botón de modo en el pin 13 y la bandera de control
+    Boton botonModo(13);
+    bool modoAuto = true;
 
-    cout << "Total Riegos Hoy: " << historialRiego.obtenerRiegos() << endl;
-    cout << "Temperatura Maxima: " << historialRiego.obtenerTempMax() << " C" << endl;
-    cout << "Humedad de Suelo Minima: " << historialRiego.obtenerSueloMin() << "%" << endl;
+    cout << "Estado Inicial -> MODO: " << (modoAuto ? "AUTO" : "MANUAL") << endl;
+
+    // 2. Simulamos escenarios de pulsación
+    // En INPUT_PULLUP: true = suelto (1), false = presionado (0)
+    bool lectura1 = true;  // Botón suelto
+    bool lectura2 = false; // El usuario presiona el botón físicamente
+
+    cout << "\n[Simulando: Usuario presiona el boton de Modo...]" << endl;
+    if (botonModo.fuePresionado(lectura2)) {
+        modoAuto = !modoAuto; // Cambiamos el modo del sistema
+    }
+    cout << "Nuevo Estado -> MODO: " << (modoAuto ? "AUTO" : "MANUAL") << endl;
+
+    cout << "\n[Simulando: Boton se queda suelto...]" << endl;
+    if (botonModo.fuePresionado(lectura1)) {
+        modoAuto = !modoAuto;
+    }
+    cout << "Estado Actual -> MODO: " << (modoAuto ? "AUTO" : "MANUAL") << endl;
 
     return 0;
 }

@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Boton.o: src/Boton.cpp.o
+.PHONY : src/Boton.o
+
+# target to build an object file
+src/Boton.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o
+.PHONY : src/Boton.cpp.o
+
+src/Boton.i: src/Boton.cpp.i
+.PHONY : src/Boton.i
+
+# target to preprocess a source file
+src/Boton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.i
+.PHONY : src/Boton.cpp.i
+
+src/Boton.s: src/Boton.cpp.s
+.PHONY : src/Boton.s
+
+# target to generate assembly for a file
+src/Boton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.s
+.PHONY : src/Boton.cpp.s
+
 src/Historial.o: src/Historial.cpp.o
 .PHONY : src/Historial.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Boton.o"
+	@echo "... src/Boton.i"
+	@echo "... src/Boton.s"
 	@echo "... src/Historial.o"
 	@echo "... src/Historial.i"
 	@echo "... src/Historial.s"

@@ -81,12 +81,12 @@ clean: CMakeFiles/SIGA_App_Fresh.dir/clean
 CMakeFiles/SIGA_App_Fresh.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=1,2,3,4 "Built target SIGA_App_Fresh"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target SIGA_App_Fresh"
 .PHONY : CMakeFiles/SIGA_App_Fresh.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SIGA_App_Fresh.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/SIGA-Esp32-Embedded/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/SIGA-Esp32-Embedded/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SIGA_App_Fresh.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /workspaces/SIGA-Esp32-Embedded/build/CMakeFiles 0
 .PHONY : CMakeFiles/SIGA_App_Fresh.dir/rule

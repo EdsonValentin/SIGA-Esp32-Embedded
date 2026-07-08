@@ -149,4 +149,6 @@ CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /workspaces/SIGA-Esp32-Embedded/include/Historial.h
+ /workspaces/SIGA-Esp32-Embedded/include/SensorLDR.h \
+ /workspaces/SIGA-Esp32-Embedded/include/Historial.h \
+ /workspaces/SIGA-Esp32-Embedded/include/Boton.h
