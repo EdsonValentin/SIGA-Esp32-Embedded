@@ -189,6 +189,12 @@ CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o: /workspaces/SIGA-Esp32-Embedded/main.c
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /workspaces/SIGA-Esp32-Embedded/include/Historial.h
 
+CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp \
+  /usr/include/stdc-predef.h \
+  /workspaces/SIGA-Esp32-Embedded/include/Historial.h
+
+
+/workspaces/SIGA-Esp32-Embedded/src/Historial.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
 

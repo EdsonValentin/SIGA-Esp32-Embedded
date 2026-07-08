@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/workspaces/SIGA-Esp32-Embedded/main.cpp" "CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o" "gcc" "CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o.d"
   "/workspaces/SIGA-Esp32-Embedded/src/Historial.cpp" "CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o" "gcc" "CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o.d"
+  "/workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp" "CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o" "gcc" "CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

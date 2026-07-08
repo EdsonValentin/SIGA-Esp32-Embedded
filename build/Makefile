@@ -177,6 +177,30 @@ src/Historial.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.s
 .PHONY : src/Historial.cpp.s
 
+src/SensorLDR.o: src/SensorLDR.cpp.o
+.PHONY : src/SensorLDR.o
+
+# target to build an object file
+src/SensorLDR.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o
+.PHONY : src/SensorLDR.cpp.o
+
+src/SensorLDR.i: src/SensorLDR.cpp.i
+.PHONY : src/SensorLDR.i
+
+# target to preprocess a source file
+src/SensorLDR.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.i
+.PHONY : src/SensorLDR.cpp.i
+
+src/SensorLDR.s: src/SensorLDR.cpp.s
+.PHONY : src/SensorLDR.s
+
+# target to generate assembly for a file
+src/SensorLDR.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.s
+.PHONY : src/SensorLDR.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... src/Historial.o"
 	@echo "... src/Historial.i"
 	@echo "... src/Historial.s"
+	@echo "... src/SensorLDR.o"
+	@echo "... src/SensorLDR.i"
+	@echo "... src/SensorLDR.s"
 .PHONY : help
 
 
