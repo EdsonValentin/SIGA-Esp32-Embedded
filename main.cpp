@@ -1,4 +1,5 @@
 #include <iostream>
+#include <memory> // Librería para Smart Pointers (Memoria segura)
 #include "SensorLDR.h"
 #include "Historial.h"
 #include "Boton.h"
@@ -11,33 +12,33 @@ int main() {
     cout << "===   SISTEMA DE RIEGO INTELIGENTE SIGA COMPLETO  ===" << endl;
     cout << "====================================================" << endl;
 
-    // 1. INSTANCIACIÓN DE COMPONENTES HARDWARE (MODULARES)
+    // 1. INSTANCIACIÓN DE COMPONENTES HARDWARE MODULARES
     SensorLDR sensorLuz(32);
     Historial historialRiego;
     Boton botonModo(13);
     Boton botonMenu(14);
 
-    // 2. INSTANCIACIÓN DE VISTAS PARA PANTALLA OLED (HERENCIA)
-    VistaMonitoreo pantallaMonitoreo;
-    // Pasamos datos iniciales simulados al historial (0 riegos, temp máx inicial, suelo mín inicial)
-    VistaHistorial pantallaHistorial(0, 0.0, 100); 
+    // 2. CREACIÓN DE SMART POINTERS PARA GESTIÓN SEGURA DE RAM
+    // 'make_unique' reserva la habitación limpia en la memoria de forma automatizada
+    auto pantallaMonitoreo = make_unique<VistaMonitoreo>();
+    // Inicializamos la vista del historial pasándole los datos iniciales (0 riegos, temp máx, suelo mín)
+    auto pantallaHistorial = make_unique<VistaHistorial>(0, 0.0, 100);
 
     // 3. VARIABLES DE ESTADO GLOBALES
     bool modoAuto = true;
     int pantallaActual = 0; // 0 = Monitoreo, 1 = Historial
-    PantallaVista* vistaActiva = &pantallaMonitoreo; // Puntero Polimórfico inicial
+    unique_ptr<PantallaVista> vistaActiva = nullptr; // Puntero Polimórfico Inteligente
 
     // =================================================================
-    // SIMULACIÓN: ESCENARIO DE OPERACIÓN REAL DE TU MAQUETA
+    // SIMULACIÓN: ESCENARIO DE OPERACIÓN REAL DEL ENTORNO
     // =================================================================
-    cout << "\n>>> [ESCENARIO 1: OPERACIÓN AUTOMÁTICA DE DÍA] <<<" << endl;
     
-    // Variables simuladas del entorno en la PC
-    int lecturaLDR_Dia = 1500;      // 1500 > 1000 = Es de Día (SL)
-    float temperaturaActual = 28.5; // Temperatura alta
-    int humedadSueloActual = 22;    // Menor a 35% = ¡Suelo Seco!
+    cout << "\n>>> [ESCENARIO 1: OPERACIÓN AUTOMÁTICA DE DÍA - SUELO SECO] <<<" << endl;
+    int lecturaLDR_Dia = 1500;      // 1500 > 1000 = Es de Día
+    float temperaturaActual = 28.5; // Temperatura alta registrada
+    int humedadSueloActual = 22;    // 22% < 35% = ¡Alerta de Suelo Seco!
 
-    // El sistema procesa los sensores de forma automática
+    // El sistema procesa los sensores y alimenta el Historial en la RAM
     historialRiego.verificarTemperatura(temperaturaActual);
     historialRiego.verificarSuelo(humedadSueloActual);
 
@@ -46,24 +47,31 @@ int main() {
         historialRiego.registrarRiego();
     }
 
-    // Actualizamos los datos reales del historial dentro de la pantalla 2
-    pantallaHistorial = VistaHistorial(historialRiego.obtenerRiegos(), historialRiego.obtenerTempMax(), historialRiego.obtenerSueloMin());
-    
-    // Dibujamos la pantalla activa actual (Monitoreo)
-    vistaActiva->dibujar();
+    // Cargamos de forma segura la vista de Monitoreo inicial usando 'std::move'
+    vistaActiva = move(pantallaMonitoreo);
+    vistaActiva->dibujar(); // Dibuja la pantalla de monitoreo
 
 
     cout << "\n>>> [ESCENARIO 2: USUARIO PRESIONA BOTÓN DE MENÚ PARA VER DIAGNÓSTICO] <<<" << endl;
-    // Simulamos que el usuario presiona físicamente el botón del pin 14 (false = presionado)
+    // Simulamos que el usuario presiona físicamente el botón del pin 14 (false = presionado en INPUT_PULLUP)
     bool pulsacionMenu = false; 
 
     if (botonMenu.fuePresionado(pulsacionMenu)) {
-        cout << "[EVENTO]: Boton Menu presionado. Intercambiando vista dinamicamente..." << endl;
+        cout << "[EVENTO]: Boton Menu detectado. Liberando memoria anterior y cambiando a Historial..." << endl;
         pantallaActual = 1;
-        vistaActiva = &pantallaHistorial; // El puntero polimórfico cambia de dirección de memoria
+        
+        // Actualizamos los datos reales acumulados del historial antes de renderizar la pantalla
+        pantallaHistorial = make_unique<VistaHistorial>(
+            historialRiego.obtenerRiegos(), 
+            historialRiego.obtenerTempMax(), 
+            historialRiego.obtenerSueloMin()
+        );
+
+        // El puntero inteligente transfiere la propiedad a la pantalla de estadísticas
+        vistaActiva = move(pantallaHistorial);
     }
 
-    // Dibujamos la nueva pantalla activa (Ahora mostrará las estadísticas guardadas)
+    // La misma instrucción dibuja ahora la pantalla de estadísticas de forma polimórfica e inteligente
     vistaActiva->dibujar();
 
 
@@ -72,9 +80,10 @@ int main() {
     bool pulsacionModo = false;
 
     if (botonModo.fuePresionado(pulsacionModo)) {
-        modoAuto = !modoAuto; // Cambiamos la bandera global
+        modoAuto = !modoAuto; // Invertimos la bandera global
         cout << "[EVENTO]: Boton Modo presionado. El sistema pasa a MODO: " << (modoAuto ? "AUTOMATICO" : "MANUAL") << endl;
     }
 
+    cout << "\n[FIN DE SIMULACIÓN]: C++ destruye los Smart Pointers y limpia la RAM automáticamente." << endl;
     return 0;
 }
