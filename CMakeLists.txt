@@ -9,11 +9,11 @@ include_directories(include)
 # Compila únicamente main y la lógica de Historial
 add_executable(SIGA_App_Fresh 
     main.cpp
-    src/Historial.cpp
-    src/SensorLDR.cpp
-    src/Boton.cpp
-    src/PantallaVista.cpp
     src/BombaRelay.cpp
+    src/Boton.cpp
+    src/Historial.cpp
+    src/PantallaVista.cpp
     src/SensorClima.cpp
+    src/SensorLDR.cpp
     src/SensorSuelo.cpp
 )

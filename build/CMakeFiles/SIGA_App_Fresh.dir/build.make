@@ -83,38 +83,24 @@ CMakeFiles/SIGA_App_Fresh.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/main.cpp -o CMakeFiles/SIGA_App_Fresh.dir/main.cpp.s
 
-CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
-CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp
-CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o -MF CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o.d -o CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o -c /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp
+CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
+CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/BombaRelay.cpp
+CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o -MF CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o.d -o CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o -c /workspaces/SIGA-Esp32-Embedded/src/BombaRelay.cpp
 
-CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp > CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.i
+CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/SIGA-Esp32-Embedded/src/BombaRelay.cpp > CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.i
 
-CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.s
-
-CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
-CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp
-CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o -MF CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o.d -o CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o -c /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp
-
-CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp > CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.i
-
-CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.s
+CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/BombaRelay.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.s
 
 CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
 CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/Boton.cpp
 CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o -MF CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o.d -o CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o -c /workspaces/SIGA-Esp32-Embedded/src/Boton.cpp
 
 CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.i: cmake_force
@@ -124,6 +110,20 @@ CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.i: cmake_force
 CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/Boton.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.s
+
+CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
+CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp
+CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o -MF CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o.d -o CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o -c /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp
+
+CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp > CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.i
+
+CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/Historial.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.s
 
 CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
 CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/PantallaVista.cpp
@@ -139,24 +139,10 @@ CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/PantallaVista.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.s
 
-CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
-CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/BombaRelay.cpp
-CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o -MF CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o.d -o CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o -c /workspaces/SIGA-Esp32-Embedded/src/BombaRelay.cpp
-
-CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/SIGA-Esp32-Embedded/src/BombaRelay.cpp > CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.i
-
-CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/BombaRelay.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.s
-
 CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
 CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/SensorClima.cpp
 CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o -MF CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o.d -o CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o -c /workspaces/SIGA-Esp32-Embedded/src/SensorClima.cpp
 
 CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.i: cmake_force
@@ -166,6 +152,20 @@ CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.i: cmake_force
 CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/SensorClima.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.s
+
+CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
+CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp
+CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspaces/SIGA-Esp32-Embedded/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o -MF CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o.d -o CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o -c /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp
+
+CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp > CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.i
+
+CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspaces/SIGA-Esp32-Embedded/src/SensorLDR.cpp -o CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.s
 
 CMakeFiles/SIGA_App_Fresh.dir/src/SensorSuelo.cpp.o: CMakeFiles/SIGA_App_Fresh.dir/flags.make
 CMakeFiles/SIGA_App_Fresh.dir/src/SensorSuelo.cpp.o: /workspaces/SIGA-Esp32-Embedded/src/SensorSuelo.cpp
@@ -184,24 +184,24 @@ CMakeFiles/SIGA_App_Fresh.dir/src/SensorSuelo.cpp.s: cmake_force
 # Object files for target SIGA_App_Fresh
 SIGA_App_Fresh_OBJECTS = \
 "CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o" \
-"CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o" \
-"CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o" \
-"CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o" \
-"CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.o" \
 "CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o" \
+"CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o" \
+"CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o" \
+"CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.o" \
 "CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o" \
+"CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o" \
 "CMakeFiles/SIGA_App_Fresh.dir/src/SensorSuelo.cpp.o"
 
 # External object files for target SIGA_App_Fresh
 SIGA_App_Fresh_EXTERNAL_OBJECTS =
 
 SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/main.cpp.o
-SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o
-SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o
-SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o
-SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.o
 SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o
+SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/Boton.cpp.o
+SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/Historial.cpp.o
+SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.o
 SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o
+SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.o
 SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/src/SensorSuelo.cpp.o
 SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/build.make
 SIGA_App_Fresh: CMakeFiles/SIGA_App_Fresh.dir/link.txt
