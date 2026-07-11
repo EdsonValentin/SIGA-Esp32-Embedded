@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/BombaRelay.o: src/BombaRelay.cpp.o
+.PHONY : src/BombaRelay.o
+
+# target to build an object file
+src/BombaRelay.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.o
+.PHONY : src/BombaRelay.cpp.o
+
+src/BombaRelay.i: src/BombaRelay.cpp.i
+.PHONY : src/BombaRelay.i
+
+# target to preprocess a source file
+src/BombaRelay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.i
+.PHONY : src/BombaRelay.cpp.i
+
+src/BombaRelay.s: src/BombaRelay.cpp.s
+.PHONY : src/BombaRelay.s
+
+# target to generate assembly for a file
+src/BombaRelay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/BombaRelay.cpp.s
+.PHONY : src/BombaRelay.cpp.s
+
 src/Boton.o: src/Boton.cpp.o
 .PHONY : src/Boton.o
 
@@ -225,6 +249,30 @@ src/PantallaVista.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/PantallaVista.cpp.s
 .PHONY : src/PantallaVista.cpp.s
 
+src/SensorClima.o: src/SensorClima.cpp.o
+.PHONY : src/SensorClima.o
+
+# target to build an object file
+src/SensorClima.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.o
+.PHONY : src/SensorClima.cpp.o
+
+src/SensorClima.i: src/SensorClima.cpp.i
+.PHONY : src/SensorClima.i
+
+# target to preprocess a source file
+src/SensorClima.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.i
+.PHONY : src/SensorClima.cpp.i
+
+src/SensorClima.s: src/SensorClima.cpp.s
+.PHONY : src/SensorClima.s
+
+# target to generate assembly for a file
+src/SensorClima.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorClima.cpp.s
+.PHONY : src/SensorClima.cpp.s
+
 src/SensorLDR.o: src/SensorLDR.cpp.o
 .PHONY : src/SensorLDR.o
 
@@ -249,6 +297,30 @@ src/SensorLDR.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorLDR.cpp.s
 .PHONY : src/SensorLDR.cpp.s
 
+src/SensorSuelo.o: src/SensorSuelo.cpp.o
+.PHONY : src/SensorSuelo.o
+
+# target to build an object file
+src/SensorSuelo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorSuelo.cpp.o
+.PHONY : src/SensorSuelo.cpp.o
+
+src/SensorSuelo.i: src/SensorSuelo.cpp.i
+.PHONY : src/SensorSuelo.i
+
+# target to preprocess a source file
+src/SensorSuelo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorSuelo.cpp.i
+.PHONY : src/SensorSuelo.cpp.i
+
+src/SensorSuelo.s: src/SensorSuelo.cpp.s
+.PHONY : src/SensorSuelo.s
+
+# target to generate assembly for a file
+src/SensorSuelo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SIGA_App_Fresh.dir/build.make CMakeFiles/SIGA_App_Fresh.dir/src/SensorSuelo.cpp.s
+.PHONY : src/SensorSuelo.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -261,6 +333,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/BombaRelay.o"
+	@echo "... src/BombaRelay.i"
+	@echo "... src/BombaRelay.s"
 	@echo "... src/Boton.o"
 	@echo "... src/Boton.i"
 	@echo "... src/Boton.s"
@@ -270,9 +345,15 @@ help:
 	@echo "... src/PantallaVista.o"
 	@echo "... src/PantallaVista.i"
 	@echo "... src/PantallaVista.s"
+	@echo "... src/SensorClima.o"
+	@echo "... src/SensorClima.i"
+	@echo "... src/SensorClima.s"
 	@echo "... src/SensorLDR.o"
 	@echo "... src/SensorLDR.i"
 	@echo "... src/SensorLDR.s"
+	@echo "... src/SensorSuelo.o"
+	@echo "... src/SensorSuelo.i"
+	@echo "... src/SensorSuelo.s"
 .PHONY : help
 
 

@@ -1,89 +1,108 @@
 #include <iostream>
-#include <memory> // Librería para Smart Pointers (Memoria segura)
+#include <memory> 
 #include "SensorLDR.h"
 #include "Historial.h"
 #include "Boton.h"
 #include "PantallaVista.h"
+#include "BombaRelay.h"   
+#include "SensorClima.h"  
+#include "SensorSuelo.h" 
 
 using namespace std;
 
 int main() {
-    cout << "====================================================" << endl;
-    cout << "===   SISTEMA DE RIEGO INTELIGENTE SIGA COMPLETO  ===" << endl;
-    cout << "====================================================" << endl;
+    cout << "=====================================================================" << endl;
+    cout << "===  SISTEMA SIGA V5.0 - REGLAS DE NEGOCIO IDÉNTICAS AL ESP32     ===" << endl;
+    cout << "=====================================================================" << endl;
 
-    // 1. INSTANCIACIÓN DE COMPONENTES HARDWARE MODULARES
-    SensorLDR sensorLuz(32);
+    // 1. COMPONENTES HARDWARE MODULARES
+    SensorLDR sensorLuz(32);       
     Historial historialRiego;
-    Boton botonModo(13);
-    Boton botonMenu(14);
-
-    // 2. CREACIÓN DE SMART POINTERS PARA GESTIÓN SEGURA DE RAM
-    // 'make_unique' reserva la habitación limpia en la memoria de forma automatizada
-    auto pantallaMonitoreo = make_unique<VistaMonitoreo>();
-    // Inicializamos la vista del historial pasándole los datos iniciales (0 riegos, temp máx, suelo mín)
-    auto pantallaHistorial = make_unique<VistaHistorial>(0, 0.0, 100);
-
-    // 3. VARIABLES DE ESTADO GLOBALES
-    bool modoAuto = true;
-    int pantallaActual = 0; // 0 = Monitoreo, 1 = Historial
-    unique_ptr<PantallaVista> vistaActiva = nullptr; // Puntero Polimórfico Inteligente
-
-    // =================================================================
-    // SIMULACIÓN: ESCENARIO DE OPERACIÓN REAL DEL ENTORNO
-    // =================================================================
     
-    cout << "\n>>> [ESCENARIO 1: OPERACIÓN AUTOMÁTICA DE DÍA - SUELO SECO] <<<" << endl;
-    int lecturaLDR_Dia = 1500;      // 1500 > 1000 = Es de Día
-    float temperaturaActual = 28.5; // Temperatura alta registrada
-    int humedadSueloActual = 22;    // 22% < 35% = ¡Alerta de Suelo Seco!
+    Boton botonModo(13);  // Cambia entre AUTO y MANUAL
+    Boton botonBomba(12); // Activa la bomba SOLO en Manual
+    Boton botonMenu(14);  // Navega entre pantallas OLED
 
-    // El sistema procesa los sensores y alimenta el Historial en la RAM
-    historialRiego.verificarTemperatura(temperaturaActual);
-    historialRiego.verificarSuelo(humedadSueloActual);
+    auto bombaAgua = make_unique<BombaRelay>(26);   
+    auto sensorDht11 = make_unique<SensorDHT11>(4); 
+    auto electrodoTierra = make_unique<SensorSuelo>(34); 
 
-    if (modoAuto && humedadSueloActual < 35) {
-        cout << "[ALERTA AUTOMÁTICA]: Humedad crítica en " << humedadSueloActual << "%. ¡Activando Bomba y registrando riego!" << endl;
-        historialRiego.registrarRiego();
+    unique_ptr<PantallaVista> vistaActiva = make_unique<VistaMonitoreo>();
+    bool modoAuto = true;
+
+    // =================================================================
+    // CASO DE USO 1: EVALUACIÓN AUTOMÁTICA CON BLOQUEO POR LLUVIA (DHT11)
+    // =================================================================
+    cout << "\n>>> [ESCENARIO 1: OPERACIÓN EN AUTOMÁTICO - EVALUANDO LLUVIA Y SUELO] <<<" << endl;
+    
+    // Simulamos condiciones climáticas (DHT11 detecta 85% de humedad, indicando lluvia)
+    float tempAire = sensorDht11->leerTemperatura(); 
+    int humedadAmbienteLluvia = 85; // 🚨 Mayor a 80% = Lloviendo
+    int lecturaSuelo = electrodoTierra->obtenerLecturaPorcentaje(); // 22% (Suelo Seco)
+    
+    historialRiego.verificarTemperatura(tempAire);
+    historialRiego.verificarSuelo(lecturaSuelo);
+
+    cout << "\n[Analizando Datos]: Tierra en " << lecturaSuelo << "% | Ambiente en " << humedadAmbienteLluvia << "% (Lluvia)" << endl;
+    
+    // Tu regla exacta: El suelo necesita agua, PERO si hay lluvia, NO se riega
+    if (modoAuto && electrodoTierra->necesitaRiego()) {
+        if (humedadAmbienteLluvia > 80) {
+            cout << "⚠️ [BLOQUEO]: El suelo está seco, pero el DHT11 reporta LLUVIA. Riego cancelado." << endl;
+            bombaAgua->apagar();
+        } else {
+            cout << "💧 [SIGA AUTO]: Condiciones normales de sequía. Activando bomba..." << endl;
+            bombaAgua->encender();
+            historialRiego.registrarRiego();
+            bombaAgua->apagar();
+        }
+    }
+    
+    // Simulamos el LDR leyendo que es de noche
+    cout << "Monitoreo LDR -> " << (sensorLuz.esNoche(450) ? "LN (Noche)" : "SL (Día)") << endl;
+    vistaActiva->dibujar(); 
+
+
+    // =================================================================
+    // CASO DE USO 2: INTENTO DE RIEGO MANUAL (PRIMERO SE CAMBIA A MANUAL)
+    // =================================================================
+    cout << "\n>>> [ESCENARIO 2: USUARIO PRUEBA PULSADORES DE CONTROL EN MANUAL] <<<" << endl;
+    
+    // Pulsador 1 (Pin 13) cambia el sistema a MANUAL
+    if (botonModo.fuePresionado(false)) {
+        modoAuto = false;
+        cout << "[EVENTO]: Pulsador Modo presionado. El sistema pasa a MODO: MANUAL" << endl;
     }
 
-    // Cargamos de forma segura la vista de Monitoreo inicial usando 'std::move'
-    vistaActiva = move(pantallaMonitoreo);
-    vistaActiva->dibujar(); // Dibuja la pantalla de monitoreo
+    // Pulsador 2 (Pin 12) intenta encender la bomba ahora que SÍ está en manual
+    if (!modoAuto) {
+        if (botonBomba.fuePresionado(false)) {
+            cout << "[EVENTO]: Pulsador Bomba presionado. Permiso CONCEDIDO por estar en Manual." << endl;
+            bombaAgua->encender();
+            historialRiego.registrarRiego(); // Se acumula en el reporte
+            bombaAgua->apagar();
+        }
+    }
 
 
-    cout << "\n>>> [ESCENARIO 2: USUARIO PRESIONA BOTÓN DE MENÚ PARA VER DIAGNÓSTICO] <<<" << endl;
-    // Simulamos que el usuario presiona físicamente el botón del pin 14 (false = presionado en INPUT_PULLUP)
-    bool pulsacionMenu = false; 
-
-    if (botonMenu.fuePresionado(pulsacionMenu)) {
-        cout << "[EVENTO]: Boton Menu detectado. Liberando memoria anterior y cambiando a Historial..." << endl;
-        pantallaActual = 1;
+    // =================================================================
+    // CASO DE USO 3: TERCER PULSADOR (PIN 14) NAVEGACIÓN OLED
+    // =================================================================
+    cout << "\n>>> [ESCENARIO 3: NAVEGACIÓN CON EL TERCER PULSADOR AL REPORTE] <<<" << endl;
+    
+    if (botonMenu.fuePresionado(false)) {
+        cout << "[EVENTO]: Pulsador Menú detectado. Renderizando reporte analítico acumulado..." << endl;
         
-        // Actualizamos los datos reales acumulados del historial antes de renderizar la pantalla
-        pantallaHistorial = make_unique<VistaHistorial>(
-            historialRiego.obtenerRiegos(), 
+        auto pantallaHistorial = make_unique<VistaHistorial>(
+            historialRiego.obtenerRiegos(), // Mostrará el riego manual ejecutado
             historialRiego.obtenerTempMax(), 
-            historialRiego.obtenerSueloMin()
+            historialRiego.obtenerSueloMin() 
         );
-
-        // El puntero inteligente transfiere la propiedad a la pantalla de estadísticas
-        vistaActiva = move(pantallaHistorial);
+        vistaActiva = move(pantallaHistorial); 
     }
 
-    // La misma instrucción dibuja ahora la pantalla de estadísticas de forma polimórfica e inteligente
-    vistaActiva->dibujar();
+    vistaActiva->dibujar(); 
 
-
-    cout << "\n>>> [ESCENARIO 3: USUARIO CAMBIA A MODO MANUAL] <<<" << endl;
-    // Simulamos que el usuario presiona el botón del pin 13 (false = presionado)
-    bool pulsacionModo = false;
-
-    if (botonModo.fuePresionado(pulsacionModo)) {
-        modoAuto = !modoAuto; // Invertimos la bandera global
-        cout << "[EVENTO]: Boton Modo presionado. El sistema pasa a MODO: " << (modoAuto ? "AUTOMATICO" : "MANUAL") << endl;
-    }
-
-    cout << "\n[FIN DE SIMULACIÓN]: C++ destruye los Smart Pointers y limpia la RAM automáticamente." << endl;
+    cout << "\n=====================================================================" << endl;
     return 0;
 }

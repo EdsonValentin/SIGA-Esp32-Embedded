@@ -13,4 +13,7 @@ add_executable(SIGA_App_Fresh
     src/SensorLDR.cpp
     src/Boton.cpp
     src/PantallaVista.cpp
+    src/BombaRelay.cpp
+    src/SensorClima.cpp
+    src/SensorSuelo.cpp
 )
